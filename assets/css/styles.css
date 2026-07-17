@@ -724,7 +724,12 @@ h3 {
 
 .case-copy { align-self: center; }
 .case-kicker { margin-bottom: 16px; color: var(--coral); font-size: 0.72rem; font-weight: 900; letter-spacing: 0.13em; text-transform: uppercase; }
-.case-copy h3 { font-size: clamp(2.7rem, 4.7vw, 5.2rem); }
+.case-copy h3 {
+  overflow-wrap: normal;
+  font-size: clamp(2.7rem, 4vw, 3.5rem);
+  hyphens: none;
+  word-break: normal;
+}
 .case-copy > p:not(.case-kicker) { color: rgba(255, 255, 255, 0.7); }
 
 .case-details { margin: 32px 0; }
@@ -852,6 +857,7 @@ h3 {
 .campaign-form input:focus, .campaign-form textarea:focus, .campaign-form select:focus { border-color: var(--cobalt); box-shadow: 0 0 0 3px rgba(28, 86, 254, 0.18); }
 .form-submit { width: 100%; margin-top: 10px; cursor: pointer; }
 .form-note { margin: 21px 0 0; color: var(--muted); font-size: 0.67rem; text-align: center; }
+.form-note a { color: var(--ink); font-weight: 800; text-decoration: underline; text-underline-offset: 3px; }
 .honeypot { position: absolute !important; left: -9999px !important; }
 
 /* FAQ */
@@ -876,6 +882,8 @@ h3 {
 .footer-links a { color: rgba(255, 255, 255, 0.72); font-size: 0.85rem; }
 .footer-links a:hover { color: var(--white); }
 .footer-action .button { margin-top: 9px; }
+.footer-email { margin-top: 10px; color: rgba(255, 255, 255, 0.72); font-size: 0.85rem; }
+.footer-email:hover { color: var(--white); }
 .footer-bottom { display: flex; align-items: center; justify-content: space-between; margin-top: 55px; border-top: 1px solid rgba(255, 255, 255, 0.2); padding-top: 22px; color: rgba(255, 255, 255, 0.48); font-size: 0.66rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
 .mobile-cta { display: none; }
 

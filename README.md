@@ -22,7 +22,7 @@ Then visit `http://localhost:8080`.
 
 ## Contact form
 
-The form currently uses the Formspree endpoint found in the supplied Vertical Haus website so the prototype has a working submission route. Before publishing, confirm that `https://formspree.io/f/mzdaqgod` should receive Campaign Producers enquiries or replace the `action` value in `index.html` with the new endpoint.
+The public contact address is `henk@campaignproducers.com`. The form currently uses the Formspree endpoint found in the supplied Vertical Haus website so the prototype has a working submission route. Before publishing, confirm in Formspree that `https://formspree.io/f/mzdaqgod` delivers Campaign Producers enquiries to `henk@campaignproducers.com`, or replace the `action` value in `index.html` with a new Campaign Producers endpoint.
 
 ## Assets and attribution
 
