@@ -63,11 +63,43 @@
   });
 
   if (form) {
-    form.addEventListener('submit', () => {
-      const submit = form.querySelector('button[type="submit"]');
-      if (!submit) return;
+    const submit = form.querySelector('button[type="submit"]');
+    const submitLabel = submit ? submit.innerHTML : '';
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      const data = new FormData(form);
+      if (String(data.get('_gotcha') || '').trim()) return;
+
+      const fields = [
+        ['Name', 'name'],
+        ['Work email', 'email'],
+        ['Company', 'company'],
+        ['What are you taking to market?', 'product'],
+        ['What must the campaign achieve?', 'commercial_goal'],
+        ['Launch date', 'launch_date'],
+        ['Working budget', 'budget'],
+      ];
+      const body = fields
+        .map(([label, name]) => `${label}\n${String(data.get(name) || '').trim()}`)
+        .join('\n\n');
+      const subject = String(data.get('_subject') || 'New Campaign Producers website brief');
+      const emailUrl = `mailto:henk@campaignproducers.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+      if (!submit) {
+        window.location.href = emailUrl;
+        return;
+      }
+
       submit.disabled = true;
-      submit.textContent = 'Sending your brief…';
+      submit.textContent = 'Opening your email…';
+      window.location.href = emailUrl;
+
+      window.setTimeout(() => {
+        submit.disabled = false;
+        submit.innerHTML = submitLabel;
+      }, 1500);
     });
   }
 
