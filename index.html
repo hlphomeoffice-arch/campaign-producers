@@ -20,6 +20,54 @@
 <meta content="https://www.campaignproducers.com/assets/images/dazn-queensberry.jpg" name="twitter:image"/>
 <link href="assets/images/campaign-producers-mark.png" rel="icon" type="image/png"/>
 <link href="assets/css/styles.css" rel="stylesheet"/>
+<style>
+/* Keep the production steps clean, aligned and easy to scan. */
+.success-list li {
+  display: grid;
+  grid-template-columns: 34px minmax(170px, 210px) minmax(0, 1fr);
+  align-items: start;
+  column-gap: 24px;
+  row-gap: 4px;
+  padding: 24px 0;
+}
+
+.success-list li > .success-number {
+  padding-top: 0.28em;
+}
+
+.success-list li > strong {
+  display: block;
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+
+.success-list li > .success-copy {
+  display: block;
+  min-width: 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+@media (max-width: 620px) {
+  .success-list li {
+    grid-template-columns: 30px minmax(0, 1fr);
+    column-gap: 14px;
+    padding: 20px 0;
+  }
+
+  .success-list li > .success-number {
+    grid-row: 1 / span 2;
+  }
+
+  .success-list li > strong,
+  .success-list li > .success-copy {
+    grid-column: 2;
+  }
+}
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -318,10 +366,26 @@
 <p>We choose the right route for each hero asset, whether that means AI, traditional production or a combination of both.</p>
 <p>Campaign Producers leads the process from brief through delivery, coordinating the people, choices and approvals that keep the work on strategy.</p>
 <ul class="success-list">
-<li><span>01</span><strong>You bring:</strong> the offer, commercial objective, business evidence, constraints and decision-makers.</li>
-<li><span>02</span><strong>We shape:</strong> the audience strategy, campaign concept, messaging, scripts and creative brief.</li>
-<li><span>03</span><strong>We produce:</strong> the agreed hero assets by selecting and coordinating the right internal team, agency, specialists or AI tools.</li>
-<li><span>04</span><strong>Together, we extend:</strong> each hero asset into a coherent campaign and decide what should happen next.</li>
+<li>
+<span class="success-number">01</span>
+<strong>You bring</strong>
+<span class="success-copy">The offer, commercial objective, business evidence, constraints and decision-makers.</span>
+</li>
+<li>
+<span class="success-number">02</span>
+<strong>We shape</strong>
+<span class="success-copy">The audience strategy, campaign concept, messaging, scripts and creative brief.</span>
+</li>
+<li>
+<span class="success-number">03</span>
+<strong>We produce</strong>
+<span class="success-copy">The agreed hero assets by selecting and coordinating the right internal team, agency, specialists or AI tools.</span>
+</li>
+<li>
+<span class="success-number">04</span>
+<strong>Together, we extend</strong>
+<span class="success-copy">Each hero asset into a coherent campaign and decide what should happen next.</span>
+</li>
 </ul>
 <p>The result is not simply more content. It is a stronger campaign, built around the pieces most likely to make people notice, care and act.</p>
 </div>
