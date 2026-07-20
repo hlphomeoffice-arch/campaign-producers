@@ -176,6 +176,15 @@ h3 {
   box-shadow: 5px 5px 0 var(--coral);
 }
 
+.button-coral {
+  background: var(--coral);
+  color: var(--ink);
+  box-shadow: 7px 7px 0 var(--white);
+}
+
+.button-coral:hover,
+.button-coral:focus-visible { background: var(--white); }
+
 .button-quiet {
   border-color: transparent;
   background: transparent;
@@ -428,7 +437,7 @@ h3 {
   padding-right: 30px;
 }
 
-.proof-rail-intro p {
+.proof-rail-intro strong {
   margin: 0;
   font-size: 0.72rem;
   font-weight: 800;
@@ -436,9 +445,11 @@ h3 {
   text-transform: uppercase;
 }
 
-.signal-slash {
+.proof-rail-intro > span {
+  display: block;
   width: 7px;
   height: 45px;
+  flex: 0 0 auto;
   background: var(--coral);
   transform: skewX(-13deg);
 }
@@ -461,7 +472,8 @@ h3 {
 }
 
 .rail-stat span { font-size: 0.67rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
-.source-note { margin-top: 13px; margin-bottom: 0; color: rgba(255, 255, 255, 0.55); font-size: 0.68rem; }
+.source-note,
+.rail-note { margin-top: 13px; margin-bottom: 0; color: rgba(255, 255, 255, 0.55); font-size: 0.68rem; }
 
 /* Shared headings */
 .section-heading { margin-bottom: 62px; }
@@ -755,6 +767,43 @@ h3 {
 .mini-stats div { border-right: 1px solid var(--white); border-bottom: 1px solid var(--white); padding: 14px; }
 .mini-stats strong { display: block; color: var(--coral); font-family: var(--display); font-size: 2.1rem; font-style: italic; line-height: 1; }
 .mini-stats span { font-size: 0.66rem; font-weight: 800; text-transform: uppercase; }
+.mini-stats-four { margin-bottom: 30px; grid-template-columns: repeat(4, 1fr); }
+
+.poster-image {
+  width: min(100%, 520px);
+  min-height: 0;
+  justify-self: center;
+  background: var(--white);
+}
+
+.poster-image img {
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 1436 / 2048;
+  object-fit: cover;
+}
+
+.poster-image figcaption {
+  padding: 11px 14px;
+  background: var(--white);
+  color: var(--ink);
+  font-size: 0.6rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.leading-lady-case { border-bottom: 1px solid rgba(255, 255, 255, 0.26); }
+
+.proof-note {
+  max-width: 980px;
+  margin: 32px auto 0;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.68rem;
+  text-align: center;
+}
+
 .case-source { max-width: 780px; margin: 12px 0 0 auto; color: rgba(255, 255, 255, 0.45); font-size: 0.68rem; text-align: right; }
 
 /* Founder */
@@ -1027,6 +1076,7 @@ h3 {
   .case-details div { grid-template-columns: 76px 1fr; }
   .case-stat strong { font-size: 4rem; }
   .mini-stats strong { font-size: 1.75rem; }
+  .mini-stats-four { grid-template-columns: repeat(2, 1fr); }
   .founder-caption { align-items: flex-start; flex-direction: column; gap: 3px; }
   .founder-image::before { top: -8px; right: -8px; }
   .authority-grid { grid-template-columns: 1fr; }
