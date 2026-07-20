@@ -1,45 +1,39 @@
 # Campaign Producers website
 
-Static, dependency-free website prepared for GitHub Pages.
+Customer-led, single-page website built around Donald Miller's StoryBrand sequence:
 
-## Included
+1. The customer wants a product launch people understand and choose.
+2. Disconnected campaign production stands in the way.
+3. Campaign Producers enters as the empathetic, experienced campaign producer.
+4. The customer receives a three-step plan.
+5. Clear calls to action invite them to start a campaign.
+6. The successful outcome is a connected campaign the whole team can use.
+7. The cost of inaction is a valuable launch lost in fragmented content.
 
-- `index.html` - complete Campaign Producers homepage.
-- `proof-leading-lady.html` - evidence-led Leading Lady case study.
-- `assets/` - responsive CSS, JavaScript and locally hosted imagery.
-- `CNAME` - custom-domain configuration for `www.campaignproducers.com`.
-- `robots.txt`, `sitemap.xml`, `.nojekyll` and `404.html` - GitHub Pages essentials.
+## Preview locally
 
-## Publish with GitHub Pages
+Open `index.html` directly, or serve the folder from a terminal:
 
-1. Upload the contents of this folder to the root of the GitHub repository.
-2. In the repository, open **Settings → Pages**.
-3. Set the source to **Deploy from a branch**.
-4. Select the required branch (normally `main`) and the root `/` folder.
-5. Confirm that the custom domain is `www.campaignproducers.com`.
-6. Enable **Enforce HTTPS** after GitHub validates the domain.
+```bash
+python3 -m http.server 8080 --directory campaign-producers-site
+```
 
-## Before going live
+Then visit `http://localhost:8080`.
 
-- “44 theatres” is the approved wording for Leading Lady. The NFVF separately reports a maximum of 65 screens across the full theatrical run.
-- Test the campaign enquiry form. It intentionally opens the visitor's email client and addresses the message to `henk@campaignproducers.com`; it does not send data to a third-party form service.
-- Replace or remove `CNAME` if the repository will not serve the existing Campaign Producers domain.
+## Contact form
 
-## Local preview
-
-Serve this folder with any static web server and open `index.html`. Do not judge the site by opening the HTML directly from the filesystem because browser security rules can affect internal navigation and scripts.
+The public contact address is `henk@campaignproducers.com`. The form currently uses the Formspree endpoint found in the supplied Vertical Haus website so the prototype has a working submission route. Before publishing, confirm in Formspree that `https://formspree.io/f/mzdaqgod` delivers Campaign Producers enquiries to `henk@campaignproducers.com`, or replace the `action` value in `index.html` with a new Campaign Producers endpoint.
 
 ## Assets and attribution
 
-- The Campaign Producers logo and monogram were extracted without redrawing from the supplied Brand Bible.
-- Queensberry × DAZN, Queensberry × DerbyFest and Henk Pretorius imagery came from the supplied Campaign Producers preview and retained professional archive.
-- The high-resolution Leading Lady poster and promotional still came from Henk's locally saved IMDb page.
-- Current commercial case studies are attributed to work delivered through Vertical Haus. Leading Lady is credited to Dark Matter Studios, with Henk Pretorius's campaign role stated separately.
+- The Campaign Producers logo and monogram were extracted without redrawing from the supplied Brand Bible master artwork.
+- Queensberry × DAZN, Queensberry × DerbyFest and Henk Pretorius images came from the supplied Vertical Haus website archive.
+- Those case studies are explicitly attributed on the website to work delivered through Vertical Haus.
 
-## Validation completed
+## Publishing checks
 
-- Internal files, links and section fragments checked.
-- Image files opened and verified.
-- JavaScript syntax checked.
-- Sitemap XML checked.
-- Upload archive integrity checked.
+- Add the final domain to canonical and social metadata once known.
+- Confirm the Formspree destination.
+- Add privacy and cookie pages appropriate to the deployment and analytics stack.
+- Keep `reported` or `company-reported` beside campaign performance figures unless platform analytics are approved for publication.
+- Do not add client logos until the exact relationship and public-use approval are confirmed.
