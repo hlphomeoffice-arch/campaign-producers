@@ -21,7 +21,7 @@ Static, dependency-free website prepared for GitHub Pages.
 
 ## Before going live
 
-- Confirm that “42-cinema footprint” is the approved wording for Leading Lady. A retained brief says 44 theatres, while the NFVF reports a maximum of 65 screens across the full theatrical run.
+- “44 theatres” is the approved wording for Leading Lady. The NFVF separately reports a maximum of 65 screens across the full theatrical run.
 - Test the campaign enquiry form. It intentionally opens the visitor's email client and addresses the message to `henk@campaignproducers.com`; it does not send data to a third-party form service.
 - Replace or remove `CNAME` if the repository will not serve the existing Campaign Producers domain.
 
