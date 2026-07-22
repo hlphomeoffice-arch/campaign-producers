@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>Campaign Producers Insights</title>
+<link>https://www.campaignproducers.com/insights/</link>
+<description>Practical thinking on campaign strategy, microdrama, AI production and smarter production decisions.</description>
+<language>en-gb</language>
+<atom:link href="https://www.campaignproducers.com/rss.xml" rel="self" type="application/rss+xml"/>
+<!-- AUTOMATED_RSS_START -->
+<item>
+<title>AI, traditional or hybrid? Start with the campaign job.</title>
+<link>https://www.campaignproducers.com/insights/ai-traditional-or-hybrid-production/</link>
+<guid isPermaLink="true">https://www.campaignproducers.com/insights/ai-traditional-or-hybrid-production/</guid>
+<pubDate>Wed, 22 Jul 2026 07:00:00 GMT</pubDate>
+<description>The most expensive production mistake is choosing the method before deciding what the campaign must make people notice, feel or do.</description>
+</item>
+<!-- AUTOMATED_RSS_END -->
+</channel>
+</rss>
