@@ -48,28 +48,31 @@ jobs:
           node-version: "22.x"
 
       - name: Confirm the OpenAI credential
+        id: credential
         if: steps.guard.outputs.skip != 'true'
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           if [ -z "$OPENAI_API_KEY" ]; then
-            echo "::error::Add OPENAI_API_KEY under Settings, Secrets and variables, Actions, then run this workflow again."
-            exit 1
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+            echo "OPENAI_API_KEY is not configured, so GitHub generation was skipped. The Tuesday editorial safety check can still prepare the draft." >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "configured=true" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Research and write the insight
-        if: steps.guard.outputs.skip != 'true'
+        if: steps.guard.outputs.skip != 'true' && steps.credential.outputs.configured == 'true'
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           REQUESTED_TOPIC: ${{ inputs.topic || '' }}
         run: node automation/generate-weekly-insight.mjs
 
       - name: Validate the website changes
-        if: steps.guard.outputs.skip != 'true'
+        if: steps.guard.outputs.skip != 'true' && steps.credential.outputs.configured == 'true'
         run: node automation/validate-site.mjs
 
       - name: Open the review draft
-        if: steps.guard.outputs.skip != 'true'
+        if: steps.guard.outputs.skip != 'true' && steps.credential.outputs.configured == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
