@@ -33,7 +33,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          open_count="$(gh pr list --state open --search 'Weekly industry insight in:title' --json number --jq 'length')"
+          open_count="$(gh pr list --state open --search 'Weekly Campaign Producers insight in:title' --json number --jq 'length')"
           if [ "$open_count" -gt 0 ]; then
             echo "skip=true" >> "$GITHUB_OUTPUT"
             echo "An editorial draft is already waiting for review." >> "$GITHUB_STEP_SUMMARY"
@@ -55,7 +55,7 @@ jobs:
         run: |
           if [ -z "$OPENAI_API_KEY" ]; then
             echo "configured=false" >> "$GITHUB_OUTPUT"
-            echo "OPENAI_API_KEY is not configured, so GitHub generation was skipped. The Tuesday editorial safety check can still prepare the draft." >> "$GITHUB_STEP_SUMMARY"
+            echo "OPENAI_API_KEY is not configured, so no editorial draft was generated. Configure the secret, then rerun the workflow." >> "$GITHUB_STEP_SUMMARY"
           else
             echo "configured=true" >> "$GITHUB_OUTPUT"
           fi
@@ -89,12 +89,14 @@ jobs:
 
           body_file="$RUNNER_TEMP/weekly-insight-pr.md"
           printf '%s\n\n' "## What changed" > "$body_file"
-          printf '%s\n\n' "A new source-backed Campaign Producers insight has been researched and written for Tuesday publication." >> "$body_file"
+          printf '%s\n\n' "A new source-backed Campaign Producers insight has been researched and prepared for review." >> "$body_file"
           printf '%s\n\n' "## Review before publishing" >> "$body_file"
           printf '%s\n' "- Read the article and check that the point of view sounds like Henk." >> "$body_file"
+          printf '%s\n' "- Confirm it supports the hand-picked specialist team and one accountable Campaign Producer positioning." >> "$body_file"
           printf '%s\n' "- Open each source and confirm it supports the associated claims." >> "$body_file"
           printf '%s\n' "- Check the headline, dates, names and any figures." >> "$body_file"
-          printf '%s\n\n' "- Merge this pull request when the article is ready to publish." >> "$body_file"
+          printf '%s\n' "- Review the LinkedIn draft separately." >> "$body_file"
+          printf '%s\n\n' "- Merge this pull request only when the article is ready to publish." >> "$body_file"
           printf '%s\n\n' "## LinkedIn draft" >> "$body_file"
           printf '%s\n' '```text' >> "$body_file"
           sed -n '1,220p' automation/latest-linkedin-post.txt >> "$body_file"
@@ -106,7 +108,7 @@ jobs:
             --draft \
             --base main \
             --head "$branch" \
-            --title "Weekly industry insight: ${article_title}" \
+            --title "Weekly Campaign Producers insight: ${article_title}" \
             --body-file "$body_file"
 
           printf '%s\n' "Draft created: ${article_title}" >> "$GITHUB_STEP_SUMMARY"

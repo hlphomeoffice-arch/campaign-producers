@@ -1,1057 +1,565 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en-GB">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Campaign Strategy, Writing &amp; Production Leadership | Campaign Producers</title>
-<meta content="Campaign strategy, writing and production leadership for marketing leaders. Clarify the message, focus the right assets and move faster from brief to market." name="description"/>
-<meta content="#F8F5EE" name="theme-color"/>
-<link href="https://www.campaignproducers.com/" rel="canonical"/>
-<meta content="Make the Campaign Clear Before You Make the Work | Campaign Producers" property="og:title"/>
-<meta content="Find the reason your audience should care, focus the assets worth making and lead production from brief to market." property="og:description"/>
-<meta content="website" property="og:type"/>
-<meta content="https://www.campaignproducers.com/" property="og:url"/>
-<meta content="Campaign Producers" property="og:site_name"/>
-<meta content="https://www.campaignproducers.com/assets/images/dazn-queensberry.jpg" property="og:image"/>
-<meta content="Campaign Producers campaign work" property="og:image:alt"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="Make the Campaign Clear Before You Make the Work | Campaign Producers" name="twitter:title"/>
-<meta content="Campaign strategy, writing and production leadership for marketing leaders, from brief to market." name="twitter:description"/>
-<meta content="https://www.campaignproducers.com/assets/images/dazn-queensberry.jpg" name="twitter:image"/>
-<link href="assets/images/campaign-producers-mark.png" rel="icon" type="image/png"/>
-<link href="assets/css/styles.css" rel="stylesheet"/>
-<style>
-/* Keep the production steps clean, aligned and easy to scan. */
-.success-list li {
-  display: grid;
-  grid-template-columns: 34px minmax(170px, 210px) minmax(0, 1fr);
-  align-items: start;
-  column-gap: 24px;
-  row-gap: 4px;
-  padding: 24px 0;
-}
-
-.success-list li > .success-number {
-  padding-top: 0.28em;
-}
-
-.success-list li > strong {
-  display: block;
-  margin: 0;
-  font-size: 1.05rem;
-  line-height: 1.3;
-}
-
-.success-list li > .success-copy {
-  display: block;
-  min-width: 0;
-  color: rgba(255, 255, 255, 0.88);
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 1.5;
-}
-
-@media (max-width: 620px) {
-  .success-list li {
-    grid-template-columns: 30px minmax(0, 1fr);
-    column-gap: 14px;
-    padding: 20px 0;
-  }
-
-  .success-list li > .success-number {
-    grid-row: 1 / span 2;
-  }
-
-  .success-list li > strong,
-  .success-list li > .success-copy {
-    grid-column: 2;
-  }
-}
-
-
-/* Keep package choices concise, with full details available on demand. */
-.offer-card {
-  display: flex;
-  flex-direction: column;
-}
-
-.offer-card > h3 {
-  margin-top: 0;
-}
-
-.offer-summary {
-  flex: 1;
-}
-
-.package-more-button {
-  align-self: flex-start;
-  margin-top: 22px;
-  font: inherit;
-  cursor: pointer;
-}
-
-.package-dialog {
-  width: min(720px, calc(100% - 32px));
-  max-width: 720px;
-  max-height: min(86vh, 780px);
-  margin: auto;
-  padding: 0;
-  overflow: auto;
-  color: #151515;
-  background: #f8f5ee;
-  border: 1px solid rgba(21, 21, 21, 0.24);
-  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.32);
-}
-
-.package-dialog::backdrop {
-  background: rgba(8, 8, 8, 0.72);
-  backdrop-filter: blur(3px);
-}
-
-.package-dialog-inner {
-  position: relative;
-  padding: clamp(30px, 6vw, 58px);
-}
-
-.package-dialog-close {
-  position: absolute;
-  top: 18px;
-  right: 18px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 10px;
-  color: inherit;
-  background: transparent;
-  border: 1px solid rgba(21, 21, 21, 0.24);
-  font: inherit;
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-.package-dialog-close:hover,
-.package-dialog-close:focus-visible {
-  background: rgba(21, 21, 21, 0.08);
-}
-
-.package-dialog-kicker {
-  margin: 0 100px 14px 0;
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.package-dialog h3 {
-  margin: 0 0 12px;
-  font-size: clamp(2rem, 5vw, 3.4rem);
-  line-height: 1;
-}
-
-.package-dialog-terms {
-  margin: 0 0 24px;
-  font-size: 0.9rem;
-}
-
-.package-dialog h4 {
-  margin: 30px 0 12px;
-  font-size: 0.82rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.package-dialog ul {
-  margin: 0;
-  padding-left: 1.25rem;
-}
-
-.package-dialog li + li {
-  margin-top: 9px;
-}
-
-.package-dialog-outcome {
-  margin: 30px 0 0;
-  padding-top: 24px;
-  border-top: 1px solid rgba(21, 21, 21, 0.2);
-}
-
-.package-dialog-actions {
-  margin-top: 28px;
-}
-
-
-
-/* Compatibility fallback for browsers without native modal dialog support. */
-.package-dialog.package-dialog-fallback {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: none;
-  height: 100%;
-  max-height: none;
-  margin: 0;
-  padding: 16px;
-  overflow-y: auto;
-  background: rgba(8, 8, 8, 0.72);
-  border: 0;
-}
-
-.package-dialog.package-dialog-fallback .package-dialog-inner {
-  width: min(720px, 100%);
-  margin: 0 auto;
-  color: #151515;
-  background: #f8f5ee;
-  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.32);
-}
-
-body.package-dialog-open {
-  overflow: hidden;
-}
-
-@media (max-width: 620px) {
-  .package-dialog {
-    width: calc(100% - 20px);
-    max-height: calc(100vh - 20px);
-  }
-
-  .package-dialog-inner {
-    padding: 72px 24px 30px;
-  }
-
-  .package-dialog-close {
-    top: 16px;
-    right: 16px;
-  }
-
-  .package-dialog-kicker {
-    margin-right: 0;
-  }
-}
-</style>
-<script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "@id": "https://www.campaignproducers.com/#business",
-  "name": "Campaign Producers",
-  "url": "https://www.campaignproducers.com/",
-  "email": "henk@campaignproducers.com",
-  "description": "Retained campaign partnerships for marketing leaders, combining audience strategy, campaign concepts, messaging, copywriting, scripts, production planning, creative direction and hands-on production leadership.",
-  "founder": {
-    "@type": "Person",
-    "name": "Henk Pretorius",
-    "jobTitle": "Founder and Campaign Producer"
-  },
-  "makesOffer": {
-    "@type": "OfferCatalog",
-    "name": "Campaign Partnerships",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "name": "Campaign Producer",
-        "description": "Campaign strategy, writing and production leadership for one important campaign and one agreed hero asset each month, with a three-month minimum."
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campaign Teams Built Around the Brief | Campaign Producers</title>
+  <meta name="description" content="Campaign Producers turns your commercial objective into a clear campaign, assembles the right human specialists and leads every moving part from brief to delivery.">
+  <meta name="theme-color" content="#f7f3ea">
+  <link rel="canonical" href="https://www.campaignproducers.com/">
+  <meta property="og:title" content="One Campaign. The Right People. | Campaign Producers">
+  <meta property="og:description" content="A hand-picked campaign team, assembled around your commercial objective and led by one accountable Campaign Producer.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.campaignproducers.com/">
+  <meta property="og:site_name" content="Campaign Producers">
+  <meta property="og:image" content="https://www.campaignproducers.com/og.png">
+  <meta property="og:image:alt" content="Campaign Producers: One campaign. The right people.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="One Campaign. The Right People. | Campaign Producers">
+  <meta name="twitter:description" content="A hand-picked campaign team, assembled around the brief and led from first decision to final delivery.">
+  <meta name="twitter:image" content="https://www.campaignproducers.com/og.png">
+  <link rel="icon" href="/assets/images/campaign-producers-mark.png" type="image/png">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "@id": "https://www.campaignproducers.com/#business",
+      "name": "Campaign Producers",
+      "url": "https://www.campaignproducers.com/",
+      "email": "henk@campaignproducers.com",
+      "description": "Campaign leadership and hand-picked specialist teams assembled around a clear commercial objective.",
+      "founder": {
+        "@type": "Person",
+        "name": "Henk Pretorius",
+        "jobTitle": "Founder and Campaign Producer"
       },
-      {
+      "makesOffer": {
         "@type": "Offer",
-        "name": "Campaign Growth Partner",
-        "description": "Ongoing campaign leadership for up to two active workstreams and two agreed hero assets each month, with a six-month minimum."
-      },
-      {
-        "@type": "Offer",
-        "name": "Embedded Campaign Producer",
-        "description": "Embedded campaign leadership and hands-on production management for up to four agreed hero assets each month, with a six-month minimum."
+        "name": "Campaign team assembly and leadership",
+        "description": "Campaign Producers clarifies the brief, selects the specialist team, agrees a transparent scope and leads strategy, creative and production through delivery."
       }
-    ]
-  }
-}</script>
+    }
+  </script>
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header" data-header="">
-<div class="shell header-inner">
-<a aria-label="Campaign Producers home" class="brand" href="#top">
-<img alt="Campaign Producers" src="assets/images/campaign-producers-logo.png"/>
-</a>
-<button aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation" class="nav-toggle" data-nav-toggle="" type="button">
-<span class="nav-toggle-label">Menu</span>
-<span aria-hidden="true" class="nav-toggle-lines"><i></i><i></i></span>
-</button>
-<nav aria-label="Primary navigation" class="site-nav" data-nav="" id="site-nav">
-<a href="#problem">Why campaigns stall</a>
-<a href="#partnerships">Partnerships</a>
-<a href="#process">Your plan</a>
-<a href="#proof">Results</a>
-<a href="#producer">Your producer</a>
-<a href="/microdramas/">Microdrama</a>
-<a class="button button-small button-primary" href="#start">Request a clarity call</a>
-</nav>
-</div>
-</header>
-<main id="main">
-<section class="hero section-pad" id="top">
-<div class="shell hero-grid">
-<div class="hero-copy reveal">
-<p class="eyebrow"><span></span>For marketing leaders with an important campaign</p>
-<h1>SAY WHAT MATTERS AND SPEND WHERE IT COUNTS</h1>
-<p class="hero-lead">We identify what your audience needs to hear, write it clearly and lead the smartest way to produce it, using AI, traditional production or the right combination of both.</p>
-<div class="button-row">
-<a class="button button-primary" href="#start">Request a clarity call</a>
-<a class="button button-quiet" href="#proof">See campaign results <span aria-hidden="true">↓</span></a>
-</div>
-<p class="microcopy">Retained partnerships with strategy, writing and hands-on production leadership included.</p>
-</div>
-<div aria-label="Your commercial priority becomes one clear campaign and a focused production plan" class="campaign-board reveal" role="img">
-<div class="board-topline">
-<span>YOUR CAMPAIGN</span>
-<span>01 / 03</span>
-</div>
-<div class="board-stage">
-<article class="board-card board-card-product">
-<span class="board-number">01</span>
-<p>What must move</p>
-<strong>The commercial result</strong>
-</article>
-<article class="board-card board-card-problem">
-<span class="board-number">02</span>
-<p>What must land</p>
-<strong>One reason to care</strong>
-</article>
-<article class="board-card board-card-story">
-<span class="board-number">03</span>
-<p>What earns budget</p>
-<strong>The priority assets</strong>
-</article>
-</div>
-<div class="board-outcome">
-<span>CLARITY</span><i></i><span>FOCUS</span><i></i><span>IMPACT</span>
-</div>
-</div>
-</div>
-</section>
-<section aria-label="Recent campaign proof" class="proof-rail">
-<div class="shell proof-rail-grid">
-<div class="proof-rail-intro">
-<span aria-hidden="true"></span>
-<strong>Recent campaign proof</strong>
-</div>
-<div class="rail-stat"><strong>&lt; 5 days</strong><span>Brief to DAZN broadcast</span></div>
-<div class="rail-stat"><strong>300k+</strong><span>Reported first-day views</span></div>
-<div class="rail-stat"><strong>35,000</strong><span>Tickets sold in two weeks</span></div>
-<div class="rail-stat"><strong>176,000</strong><span>Leading Lady admissions</span></div>
-</div>
-<p class="shell rail-note">Current commercial cases were delivered at the production company Henk led before founding Campaign Producers, and use company-reported results. Leading Lady records are detailed in its evidence page.</p>
-</section>
-<section class="section-pad problem-section" id="problem">
-<div class="shell">
-<div class="section-heading split-heading reveal">
-<div>
-<p class="eyebrow"><span></span>Why campaigns lose force</p>
-<h2>Your campaign can get busier while the reason to care disappears.</h2>
-</div>
-<div class="heading-copy">
-<p>Marketing leaders are expected to create momentum across more channels, teams and suppliers.</p>
-<p><strong>When campaign decisions split apart, you carry the pressure. Work multiplies, approvals slow and the audience loses the reason to act.</strong></p>
-</div>
-</div>
-<div class="problem-grid">
-<article class="problem-card reveal">
-<span>01 / MESSAGE</span>
-<h3>The message asks too much of the audience.</h3>
-<p>A strong offer is buried under competing claims, so people cannot quickly see why it matters or what to do next.</p>
-</article>
-<article class="problem-card reveal">
-<span>02 / PRIORITIES</span>
-<h3>Everything becomes a priority.</h3>
-<p>Assets enter production before the campaign decides which few can create the most value.</p>
-</article>
-<article class="problem-card reveal">
-<span>03 / PRODUCTION</span>
-<h3>Production starts with habit.</h3>
-<p>Teams default to familiar formats and suppliers instead of the route that best serves the campaign.</p>
-</article>
-</div>
-<div class="principle-card reveal">
-<p>Decide what the campaign must change. Then decide what deserves to be made.</p>
-</div>
-</div>
-</section>
-<section class="guide-intro section-pad ink-section">
-<div class="shell guide-intro-grid">
-<div class="reveal">
-<p class="eyebrow eyebrow-light"><span></span>A clearer way forward</p>
-<h2>One campaign direction, from strategy through production.</h2>
-</div>
-<div class="guide-copy reveal">
-<p class="large-copy">You should not have to coordinate strategy, writing, creative and production just to keep one campaign coherent.</p>
-<p>You lead the marketing. We bring the decisions together, sharpen the message and lead the work to market, so your team moves with confidence.</p>
-</div>
-</div>
-</section>
-<section class="section-pad offer-section" id="partnerships">
-<div class="shell">
-<div class="section-heading split-heading reveal">
-<div>
-<p class="eyebrow"><span></span>Choose your level of support</p>
-<h2>Give your team the campaign leadership it needs.</h2>
-</div>
-<div class="heading-copy">
-<p>Every partnership gives you one senior point of accountability across audience strategy, campaign concepts, messaging, copy, scripts, production planning, budget guidance, creative direction and hands-on production management.</p>
-<p><strong>A hero asset is the lead piece that carries the campaign, such as a film, commercial, key visual, launch presentation, landing page, podcast episode or another agreed priority asset.</strong></p>
-</div>
-</div>
-<div class="offer-grid">
-<article class="offer-card reveal">
-<h3>Campaign Producer</h3>
-<p class="offer-summary">For a marketing leader preparing one important launch or campaign that needs a clear idea, sharp writing and confident production leadership.</p>
-<button aria-controls="package-campaign-producer" aria-expanded="false" aria-haspopup="dialog" class="button button-quiet package-more-button" data-package-open="package-campaign-producer" type="button">More info</button>
-</article>
-<article class="offer-card offer-card-featured reveal">
-<h3>Campaign Growth Partner</h3>
-<p class="offer-summary">For a marketing leader running campaigns throughout the year who needs sharper priorities, stronger consistency and joined-up production.</p>
-<button aria-controls="package-growth-partner" aria-expanded="false" aria-haspopup="dialog" class="button button-quiet package-more-button" data-package-open="package-growth-partner" type="button">More info</button>
-</article>
-<article class="offer-card reveal">
-<h3>Embedded Campaign Producer</h3>
-<p class="offer-summary">For a marketing leader who needs senior campaign leadership embedded across the business, team and creative partners.</p>
-<button aria-controls="package-embedded-producer" aria-expanded="false" aria-haspopup="dialog" class="button button-quiet package-more-button" data-package-open="package-embedded-producer" type="button">More info</button>
-</article>
-</div>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<dialog aria-labelledby="package-campaign-producer-title" aria-modal="true" class="package-dialog" id="package-campaign-producer">
-<div class="package-dialog-inner">
-<button aria-label="Close Campaign Producer details" class="package-dialog-close" data-package-close="" type="button">Close <span aria-hidden="true">×</span></button>
-<p class="package-dialog-kicker">One campaign / one hero asset</p>
-<h3 id="package-campaign-producer-title">Campaign Producer</h3>
-<p class="package-dialog-terms">Three-month minimum</p>
-<p>For a marketing leader preparing one important launch or campaign that needs a clear idea, sharp writing and confident production leadership.</p>
-<h4>What you get</h4>
-<ul>
-<li>Define the audience, offer, barrier and commercial outcome.</li>
-<li>Build the proposition, campaign idea and core message.</li>
-<li>Write the priority copy and scripts.</li>
-<li>Set the creative brief, production route and budget logic.</li>
-<li>Lead one agreed hero asset each month from brief to delivery.</li>
-<li>Direct the supporting assets so the campaign stays coherent.</li>
-<li>Coordinate the right internal team, agency, specialists or AI tools.</li>
-</ul>
-<p class="package-dialog-outcome"><strong>What changes:</strong> you gain one clear campaign idea, one professionally led hero asset and a direction your whole team can use.</p>
-<div class="package-dialog-actions"><a class="button button-primary" data-package-cta="" href="#start">Request a clarity call <span aria-hidden="true">→</span></a></div>
-</div>
-</dialog>
+  <header class="site-header" data-header>
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="Campaign Producers home">
+        <img src="/assets/images/campaign-producers-logo.png" alt="Campaign Producers" width="800" height="208">
+      </a>
+      <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open navigation" data-nav-toggle>
+        <span class="nav-toggle-label">Menu</span>
+        <span class="nav-toggle-lines" aria-hidden="true"><i></i><i></i></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-nav>
+        <a href="#process">How it works</a>
+        <a href="#collective">The Collective</a>
+        <a href="/insights/">Insights</a>
+        <a href="#proof">Results</a>
+        <a href="#producer">Your Campaign Producer</a>
+        <a href="#join">Join the Collective</a>
+        <a class="button button-small button-primary" href="#start">Build Your Campaign Team</a>
+      </nav>
+    </div>
+  </header>
 
-<dialog aria-labelledby="package-growth-partner-title" aria-modal="true" class="package-dialog" id="package-growth-partner">
-<div class="package-dialog-inner">
-<button aria-label="Close Campaign Growth Partner details" class="package-dialog-close" data-package-close="" type="button">Close <span aria-hidden="true">×</span></button>
-<p class="package-dialog-kicker">Two workstreams / two hero assets</p>
-<h3 id="package-growth-partner-title">Campaign Growth Partner</h3>
-<p class="package-dialog-terms">Six-month minimum</p>
-<p>For a marketing leader running campaigns throughout the year who needs sharper priorities, stronger consistency and joined-up production.</p>
-<h4>What you get</h4>
-<ul>
-<li>Set quarterly campaign direction and monthly priorities.</li>
-<li>Support up to two active campaign workstreams at a time.</li>
-<li>Shape audience propositions, concepts, messages, copy and scripts.</li>
-<li>Lead up to two agreed hero assets each month.</li>
-<li>Plan how each hero asset extends across channels.</li>
-<li>Align internal teams, agencies and production partners.</li>
-<li>Review available results and recommend the next best move.</li>
-</ul>
-<p class="package-dialog-outcome"><strong>What changes:</strong> your campaigns become a connected programme, with sharper priorities, stronger creative consistency and more value from every asset.</p>
-<div class="package-dialog-actions"><a class="button button-primary" data-package-cta="" href="#start">Request a clarity call <span aria-hidden="true">→</span></a></div>
-</div>
-</dialog>
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="shell hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span></span>Campaign talent, assembled around the brief</p>
+          <h1>
+            <span>One campaign.</span>
+            <span>The right people.</span>
+          </h1>
+          <p class="hero-lead">We turn your commercial objective into a clear campaign, assemble a hand-picked team of human specialists and lead every moving part from brief to delivery.</p>
+          <div class="button-row">
+            <a class="button button-primary" href="#start">Build Your Campaign Team <span aria-hidden="true">→</span></a>
+            <a class="button button-quiet" href="#join">Join the Collective</a>
+          </div>
+          <p class="trust-line"><i aria-hidden="true"></i>Human-led. AI-enabled. One accountable Campaign Producer.</p>
+        </div>
 
-<dialog aria-labelledby="package-embedded-producer-title" aria-modal="true" class="package-dialog" id="package-embedded-producer">
-<div class="package-dialog-inner">
-<button aria-label="Close Embedded Campaign Producer details" class="package-dialog-close" data-package-close="" type="button">Close <span aria-hidden="true">×</span></button>
-<p class="package-dialog-kicker">Embedded / four hero assets</p>
-<h3 id="package-embedded-producer-title">Embedded Campaign Producer</h3>
-<p class="package-dialog-terms">Six-month minimum</p>
-<p>For a marketing leader who needs senior campaign leadership embedded across the business, team and creative partners.</p>
-<h4>What you get</h4>
-<ul>
-<li>Reserve embedded campaign capacity for your business.</li>
-<li>Prioritise across products, audiences and campaign workstreams.</li>
-<li>Develop ongoing propositions, concepts, messages, copy and scripts.</li>
-<li>Lead up to four agreed hero assets each month.</li>
-<li>Work directly with leadership, marketing and creative teams.</li>
-<li>Guide budgets, suppliers, reviews and approvals.</li>
-<li>Protect quality and campaign clarity from brief to final delivery.</li>
-</ul>
-<p class="package-dialog-outcome"><strong>What changes:</strong> you gain an experienced campaign lead who keeps strategy, creative work and production moving towards the same commercial result.</p>
-<div class="package-dialog-actions"><a class="button button-primary" data-package-cta="" href="#start">Request a clarity call <span aria-hidden="true">→</span></a></div>
-</div>
-</dialog>
-<div class="plan-cta reveal">
-<a class="button button-primary" href="#start">Request a clarity call</a>
-<span>Your retainer covers strategy, writing, creative direction, production planning and hands-on management of agreed hero assets. Finished production costs, including filming, design, editing, animation, talent, media and external suppliers, are separate.</span>
-</div>
-</div>
-</section>
-<section class="section-pad plan-section" id="process">
-<div class="shell">
-<div class="section-heading centred reveal">
-<p class="eyebrow eyebrow-centred"><span></span>Your three-step plan</p>
-<h2>Move from commercial pressure to a campaign your team can execute.</h2>
-<p>We make the important decisions in the right order, then lead the work through production.</p>
-</div>
-<ol class="plan-grid">
-<li class="plan-step reveal">
-<span class="plan-number">01</span>
-<h3>Clarify what must change.</h3>
-<p>Define the audience, offer, barrier, commercial objective, evidence and constraints.</p>
-<small>Leave with one clear campaign job.</small>
-</li>
-<li class="plan-step reveal">
-<span class="plan-number">02</span>
-<h3>Decide what to say and make.</h3>
-<p>Build the proposition, campaign idea, message, hero assets, production route and budget logic.</p>
-<small>Give every asset a reason to exist.</small>
-</li>
-<li class="plan-step reveal">
-<span class="plan-number">03</span>
-<h3>Lead the work to market.</h3>
-<p>Guide the agreed hero assets through production, align the supporting teams and use available evidence to choose the next priority.</p>
-<small>Keep the campaign clear as it grows.</small>
-</li>
-</ol>
-<div class="plan-cta reveal">
-<a class="button button-primary" href="#start">Request a clarity call</a>
-<span>Know the first priority, the right level of support and what should happen next.</span>
-</div>
-</div>
-</section>
-<section class="section-pad success-section" id="delivery">
-<div class="shell success-grid">
-<div class="reveal">
-<p class="eyebrow eyebrow-light"><span></span>Production without the guesswork</p>
-<h2>Produce what the campaign needs, not what habit dictates.</h2>
-<p>Each hero asset gets the production route that best serves its job, whether that uses AI, traditional production or both.</p>
-<p>Campaign Producers coordinates the people, decisions and approvals from brief to delivery, so the work stays on strategy and keeps moving.</p>
-<ul class="success-list">
-<li>
-<span class="success-number">01</span>
-<strong>You bring</strong>
-<span class="success-copy">The commercial objective, offer, evidence, constraints and decision-makers.</span>
-</li>
-<li>
-<span class="success-number">02</span>
-<strong>We clarify</strong>
-<span class="success-copy">The audience, proposition, campaign idea, message and creative brief.</span>
-</li>
-<li>
-<span class="success-number">03</span>
-<strong>We lead</strong>
-<span class="success-copy">The agreed hero assets, using the right internal team, agency, specialists or AI tools.</span>
-</li>
-<li>
-<span class="success-number">04</span>
-<strong>Together, we extend</strong>
-<span class="success-copy">The strongest work across the campaign, then decide the next priority.</span>
-</li>
-</ul>
-<p>You get less wasted effort, stronger assets and a team moving towards work that makes people notice, care and act.</p>
-</div>
-<div aria-label="One campaign direction guides your team, agency, specialists and tools towards stronger hero assets" class="system-map reveal" role="img">
-<div class="system-orbit orbit-one"><span>Your team</span></div>
-<div class="system-orbit orbit-two"><span>Agency</span></div>
-<div class="system-orbit orbit-three"><span>Specialists</span></div>
-<div class="system-orbit orbit-four"><span>AI + tools</span></div>
-<div class="system-centre"><small>One clear</small><strong>CAMPAIGN</strong><small>guides the production</small></div>
-<div class="system-output">HERO ASSET<br/><strong>BUILT TO MOVE PEOPLE</strong></div>
-</div>
-</div>
-</section>
-<section class="section-pad proof-section" id="proof">
-<div class="shell">
-<div class="section-heading split-heading light-heading reveal">
-<div>
-<p class="eyebrow eyebrow-light"><span></span>Campaign results</p>
-<h2>Clear judgement when the deadline, budget and outcome matter.</h2>
-</div>
-<div class="heading-copy">
-<p>These campaigns were delivered at the production company Henk led before founding Campaign Producers, where he was managing director and producer. They show the speed, focus and production control he brings to Campaign Producers.</p>
-</div>
-</div>
-<article class="case-study reveal">
-<div class="case-image case-image-wide">
-<img alt="Queensberry fighters in a DAZN campaign visual" src="assets/images/dazn-queensberry.jpg"/>
-<span>CASE 01 / RAPID CAMPAIGN DELIVERY</span>
-</div>
-<div class="case-copy">
-<p class="case-kicker">Queensberry × DAZN</p>
-<h3>From brief to international broadcast in fewer than five days.</h3>
-<p>A fast-moving fight-night brief became a clear 30-second commercial, produced and delivered for international broadcast.</p>
-<dl class="case-details">
-<div><dt>Commercial job</dt><dd>Create and deliver the priority asset against an exceptional deadline.</dd></div>
-<div><dt>Henk’s role</dt><dd>Managing director and producer at the production company he led before founding Campaign Producers.</dd></div>
-<div><dt>Reported response</dt><dd>More than 300,000 first-day views.</dd></div>
-</dl>
-<div class="case-stat"><strong>&lt; 5</strong><span>days from brief to broadcast</span></div>
-</div>
-</article>
-<article class="case-study case-study-reverse reveal">
-<div class="case-image case-image-wide">
-<img alt="DerbyFest campaign hero featuring a period character" class="derby-hero" src="assets/images/derbyfest-hero.png"/>
-<span>CASE 02 / CAMPAIGN WORLD</span>
-</div>
-<div class="case-copy">
-<p class="case-kicker">Queensberry × DerbyFest</p>
-<h3>35,000 tickets in two weeks. DerbyFest sold out.</h3>
-<p>A distinctive DerbyFest creative world helped the event stand out inside the wider Queensberry sales campaign.</p>
-<dl class="case-details">
-<div><dt>Campaign job</dt><dd>Give DerbyFest a memorable identity within the wider sales push.</dd></div>
-<div><dt>Henk’s role</dt><dd>Managing director and producer at the production company he led before founding Campaign Producers.</dd></div>
-<div><dt>Reported response</dt><dd>DerbyFest sold out, while the wider campaign sold 35,000 tickets.</dd></div>
-</dl>
-<div class="mini-stats">
-<div><strong>35,000</strong><span>tickets sold</span></div>
-<div><strong>2 weeks</strong><span>campaign window</span></div>
-<div><strong>Sold out</strong><span>DerbyFest at Epsom</span></div>
-</div>
-</div>
-</article>
-<article class="case-study leading-lady-case">
-<figure class="case-image poster-image reveal">
-<img alt="High-resolution Leading Lady theatrical poster" src="assets/images/leading-lady-imdb-poster-1436x2048.jpg"/>
-<figcaption>Current IMDb poster / 1436 × 2048</figcaption>
-</figure>
-<div class="case-copy reveal">
-<p class="case-kicker">Leading Lady / Independent film campaign</p>
-<h3>176,000 admissions from 44 theatres. Then international sales and Netflix USA.</h3>
-<p>An independent romantic comedy became South Africa's second-highest-grossing local film of 2014 and travelled across 15 territories.</p>
-<dl class="case-details">
-<div><dt>Campaign producer</dt><dd>Henk Pretorius - also co-writer, director and producer.</dd></div>
-<div><dt>Production</dt><dd>Dark Matter Studios, where Henk was co-founder and creative director before exiting to focus exclusively on campaign work.</dd></div>
-</dl>
-<div class="mini-stats mini-stats-four">
-<div><strong>176,000</strong><span>admissions</span></div>
-<div><strong>44</strong><span>theatres</span></div>
-<div><strong>#2</strong><span>local film</span></div>
-<div><strong>15</strong><span>territories</span></div>
-</div>
-<a class="button button-coral" href="proof-leading-lady.html">Open the evidence</a>
-</div>
-</article>
-<p class="proof-note">Queensberry cases were delivered at the production company Henk led before founding Campaign Producers, and use company-reported results. Leading Lady's admissions, cinema count and territory sales are drawn from Henk's retained campaign records; independent sources corroborate its national ranking, box office and North American rights deal.</p>
-</div>
-</section>
-<section class="section-pad founder-section" id="producer">
-<div class="shell founder-grid">
-<div class="founder-image reveal">
-<img alt="Henk Pretorius, founder of Campaign Producers" src="assets/images/henk-pretorius.jpg"/>
-<div class="founder-caption"><strong>Henk Pretorius</strong><span>Founder / Campaign Producer</span></div>
-</div>
-<div class="founder-copy reveal">
-<p class="eyebrow"><span></span>Your guide</p>
-<h2>Senior campaign judgement, directly involved.</h2>
-<p class="large-copy">You should not have to translate strategy through layers of account management. You work directly with the person shaping the idea, writing the message and leading production.</p>
-<p>Across cinema, streaming and commercial campaigns, Henk combines a writer’s instinct for meaning, a director’s command of attention and a producer’s responsibility for delivery.</p>
-<p>He brings that judgement to your campaign strategy, concepts, writing, briefs, production choices and agreed creative reviews.</p>
-<div aria-label="Selected career proof" class="authority-grid" role="group">
-<div><strong>Audience awards</strong><span>Seattle, Sedona and Jozi</span></div>
-<div><strong>SAFTA nominated</strong><span>Directing and co-writing</span></div>
-<div><strong>Commercial delivery</strong><span>Cinema to broadcast</span></div>
-<div><strong>Format fluent</strong><span>Film, vertical and social</span></div>
-</div>
-<p class="founder-note">Two decades of helping audiences notice, care and act, with a practical understanding of what it takes to deliver.</p>
-</div>
-</div>
-</section>
-<section class="section-pad problem-section" id="fit">
-<div class="shell">
-<div class="section-heading split-heading reveal">
-<div>
-<p class="eyebrow"><span></span>Who this is for</p>
-<h2>For marketing leaders with an important result to deliver.</h2>
-</div>
-<div class="heading-copy">
-<p>The partnership works best when the campaign matters, the right people can collaborate and there is a real route to market.</p>
-</div>
-</div>
-<div class="problem-grid">
-<article class="problem-card reveal">
-<span>01 / PRIORITY</span>
-<h3>Something important must move.</h3>
-<p>A launch, event, offer, repositioning or ongoing campaign programme with a measurable commercial job.</p>
-</article>
-<article class="problem-card reveal">
-<span>02 / COLLABORATION</span>
-<h3>Your team is ready to align.</h3>
-<p>Leadership, marketing, creative teams, agencies or specialists can work from one clear direction.</p>
-</article>
-<article class="problem-card reveal">
-<span>03 / MOMENTUM</span>
-<h3>The campaign can reach customers.</h3>
-<p>You have a route through owned channels, paid media, sales, events, launch plans or distribution partners.</p>
-</article>
-</div>
-<div class="principle-card reveal">
-<p>A STRONG FIT MEAN CLEAR DECISIONS, A MEANINGFUL COLLABORATION AND A COMMITMENT TO MAKING EVERY ASSET COUNT</p>
-</div>
-</div>
-</section>
-<section class="section-pad contact-section" id="start">
-<div class="shell contact-grid">
-<div class="contact-copy reveal">
-<p class="eyebrow"><span></span>Request a campaign clarity call</p>
-<h2>Bring the campaign that needs to work.</h2>
-<p>Tell us what you are taking to market, what feels unclear and what is at stake. We will identify the first priority and recommend the right level of support.</p>
-<div class="contact-expectation">
-<span>What happens next</span>
-<ol>
-<li>We clarify the commercial objective, audience and constraints.</li>
-<li>We identify the decision most likely to strengthen the campaign.</li>
-<li>We recommend the right partnership, scope and starting priority.</li>
-</ol>
-</div>
-</div>
-<form accept-charset="UTF-8" action="https://script.google.com/macros/s/AKfycbw5cHZpa-JsfMXsmFlGUAun1tZ2tbU8rq2r4dCNn_fZlUSpGUK8bfC06NyrIjt27CI3/exec" class="campaign-form reveal" id="campaign-enquiry-form" method="POST">
-<input name="page" type="hidden" value="https://www.campaignproducers.com/"/>
-<input aria-hidden="true" autocomplete="off" class="honeypot" name="website" tabindex="-1" type="text"/>
-<div class="form-heading">
-<span>Campaign clarity request / 01</span>
-<strong>Tell us what needs to move</strong>
-</div>
-<div class="field-row">
-<label>Name<input autocomplete="name" name="name" placeholder="Your name" required="" type="text"/></label>
-<label>Work email<input autocomplete="email" name="email" placeholder="you@company.com" required="" type="email"/></label>
-</div>
-<label>Company<input autocomplete="organization" name="company" placeholder="Company or brand" required="" type="text"/></label>
-<label>What are you taking to market?<textarea name="product" placeholder="The product, offer, event, launch or commercial priority" required=""></textarea></label>
-<label>What needs to change?<textarea name="message" placeholder="What feels unclear, fragmented, delayed, underperforming or wasteful?" required=""></textarea></label>
-<div class="field-row">
-<label>How often do you run campaigns?<select name="campaign_frequency" required="">
-<option disabled="" selected="" value="">Select the closest fit</option>
-<option>One important launch or campaign</option>
-<option>Several campaigns each year</option>
-<option>Campaigns every month or quarter</option>
-<option>Multiple or always-on campaign workstreams</option>
-<option>Not sure yet</option>
-</select></label>
-<label>Which level of support seems closest?<select name="partnership" required="">
-<option disabled="" selected="" value="">Select an option</option>
-<option>Campaign Producer</option>
-<option>Campaign Growth Partner</option>
-<option>Embedded Campaign Producer</option>
-<option>Not sure, please recommend</option>
-</select></label>
-</div>
-<label>Who needs to be involved?<textarea name="current_team" placeholder="Leadership, marketing, your in-house team, agency, freelancers or production partners"></textarea></label>
-<div class="field-row">
-<label>Preferred start<input name="start_timeframe" placeholder="Date or timeframe" required="" type="text"/></label>
-<label>Expected production or media budget<select name="budget">
-<option selected="" value="">Choose the closest range</option>
-<option>Under £10k</option>
-<option>£10k to £25k</option>
-<option>£25k to £50k</option>
-<option>£50k to £100k</option>
-<option>£100k+</option>
-<option>Varies by campaign</option>
-<option>Not set yet</option>
-</select></label>
-</div>
-<button class="button button-primary form-submit" type="submit">Request a clarity call <span aria-hidden="true">→</span></button>
-<p aria-live="polite" class="form-note" data-form-status="" hidden="" role="status"></p>
-<p class="form-note">Your information is used only to respond to this enquiry. Prefer email? <a href="mailto:henk@campaignproducers.com">henk@campaignproducers.com</a></p>
-</form>
-</div>
-</section>
-<section class="section-pad faq-section" id="faq">
-<div class="shell faq-grid">
-<div class="reveal">
-<p class="eyebrow"><span></span>Before you begin</p>
-<h2>Clear answers. No hidden assumptions.</h2>
-</div>
-<div class="faq-list reveal">
-<details>
-<summary>What is included in the monthly retainer?</summary>
-<p>Every partnership includes audience and campaign strategy, concepts, messaging, copy, scripts, production planning, budget guidance, creative direction and hands-on management. The partnership sets the number of active workstreams and hero assets.</p>
-</details>
-<details>
-<summary>What counts as a hero asset?</summary>
-<p>A hero asset is the lead piece that carries the campaign. It could be a film, commercial, key visual, launch presentation, landing page, podcast episode or another agreed priority asset.</p>
-</details>
-<details>
-<summary>What does hands-on production management mean?</summary>
-<p>We turn the campaign idea into a practical brief, choose the production route, coordinate contributors, manage reviews and approvals, and keep the work aligned from first decision to final delivery.</p>
-</details>
-<details>
-<summary>Can you work with our in-house team or existing agency?</summary>
-<p>Yes. We can lead the campaign and production process while working with your leadership, marketing team, agency, freelancers and specialist suppliers.</p>
-</details>
-<details>
-<summary>Which partnership is right for us?</summary>
-<p>Choose Campaign Producer for one important campaign and one hero asset each month. Choose Campaign Growth Partner for up to two active workstreams and two hero assets. Choose Embedded Campaign Producer for ongoing leadership and up to four hero assets.</p>
-</details>
-<details>
-<summary>How do you review campaign performance?</summary>
-<p>We use the evidence available to your team, including response, engagement, conversion and commercial feedback, to see what is working and choose the next priority.</p>
-</details>
-</div>
-</div>
-</section>
-</main>
-<footer class="site-footer">
-<div class="shell footer-grid">
-<div class="footer-brand">
-<img alt="Campaign Producers" src="assets/images/campaign-producers-logo.png"/>
-<p>Say what matters. Spend where it counts.</p>
-</div>
-<div class="footer-links">
-<span>Navigate</span>
-<a href="#problem">Why campaigns stall</a>
-<a href="#partnerships">Partnerships</a>
-<a href="#process">Your plan</a>
-<a href="#proof">Results</a>
-<a href="#producer">Your campaign producer</a>
-</div>
-<div class="footer-action">
-<span>Have an important campaign to move?</span>
-<a class="button button-primary" href="#start">Request a clarity call</a>
-<a class="footer-email" href="mailto:henk@campaignproducers.com">henk@campaignproducers.com</a>
-</div>
-</div>
-<div class="shell footer-bottom">
-<span>© <span data-year="">2026</span> Campaign Producers</span>
-<span>Strategy / Messaging / Production leadership / Creative direction</span>
-</div>
-</footer>
-<a class="mobile-cta" data-mobile-cta="" href="#start">Request a clarity call</a>
-<script>
-(() => {
-  const openButtons = Array.from(document.querySelectorAll("[data-package-open]"));
-  const dialogs = Array.from(document.querySelectorAll("dialog.package-dialog"));
+        <div class="assembly-sheet reveal" role="img" aria-label="A campaign team sheet showing specialists selected around one commercial objective and led by one Campaign Producer">
+          <div class="sheet-meta">
+            <span>Campaign team sheet</span>
+            <span>Built after the brief / 01</span>
+          </div>
+          <div class="sheet-objective">
+            <small>Commercial objective</small>
+            <strong>What needs to move?</strong>
+            <span>Launch / sell / grow / reposition</span>
+          </div>
+          <div class="sheet-connector" aria-hidden="true"><i></i></div>
+          <div class="sheet-producer">
+            <span>Campaign Producer</span>
+            <strong>One accountable lead</strong>
+          </div>
+          <div class="sheet-roles" aria-hidden="true">
+            <div><span>01</span><strong>Strategy</strong><small>Selected if the brief needs it</small></div>
+            <div><span>02</span><strong>Creative</strong><small>Selected if the brief needs it</small></div>
+            <div><span>03</span><strong>Production</strong><small>Selected if the brief needs it</small></div>
+            <div><span>04</span><strong>Performance</strong><small>Selected if the brief needs it</small></div>
+          </div>
+          <div class="sheet-footer">
+            <span>Only the talent the campaign needs</span>
+            <strong>One team / One direction</strong>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  if (!openButtons.length || !dialogs.length) {
-    return;
-  }
+    <section class="proof-rail" aria-label="Selected campaign results">
+      <div class="shell proof-rail-grid">
+        <p class="proof-rail-label"><span></span>Selected prior campaign work</p>
+        <div class="rail-stat"><strong>&lt; 5 days</strong><span>Brief to DAZN broadcast</span></div>
+        <div class="rail-stat"><strong>300,000+</strong><span>Reported first-day views</span></div>
+        <div class="rail-stat"><strong>35,000</strong><span>Tickets sold in two weeks</span></div>
+        <div class="rail-stat"><strong>176,000</strong><span>Leading Lady admissions</span></div>
+      </div>
+    </section>
 
-  const isOpen = (dialog) => dialog.hasAttribute("open");
+    <section class="section-pad problem-section" id="problem">
+      <div class="shell">
+        <div class="section-index">01 / The false choice</div>
+        <div class="split-heading reveal">
+          <div>
+            <p class="eyebrow"><span></span>The problem</p>
+            <h2>Finding talent is easy. Building the right team isn’t.</h2>
+          </div>
+          <div class="heading-copy">
+            <p>Most businesses face three options: hire a full agency, coordinate a loose group of freelancers or ask an overstretched internal team to do too much.</p>
+            <p><strong>One can be expensive. Another becomes fragmented. The third becomes exhausting.</strong></p>
+          </div>
+        </div>
+        <div class="choice-grid">
+          <article class="choice-card reveal">
+            <span>01 / Fixed agency</span>
+            <h3>A full agency can mean paying for more than the campaign needs.</h3>
+            <p>You may inherit extra layers, roles and costs before the clearest route to the result has been worked out.</p>
+          </article>
+          <article class="choice-card reveal">
+            <span>02 / Loose freelancers</span>
+            <h3>Good people, but no single campaign direction.</h3>
+            <p>You source, brief and coordinate every contributor while trying to keep the work connected yourself.</p>
+          </article>
+          <article class="choice-card reveal">
+            <span>03 / Internal team</span>
+            <h3>More pressure on people already carrying the business.</h3>
+            <p>Important campaign decisions compete with the work your team must keep delivering every day.</p>
+          </article>
+        </div>
+        <div class="statement-card reveal">
+          <span>Our alternative</span>
+          <p>Only the talent your campaign needs, assembled around one clear commercial objective and led as one team.</p>
+        </div>
+      </div>
+    </section>
 
-  const updatePageScroll = () => {
-    document.body.classList.toggle(
-      "package-dialog-open",
-      dialogs.some((dialog) => isOpen(dialog))
-    );
-  };
+    <section class="section-pad solution-section" id="solution">
+      <div class="shell solution-grid">
+        <div class="solution-intro reveal">
+          <div class="section-index section-index-light">02 / The team</div>
+          <p class="eyebrow eyebrow-light"><span></span>Not a directory. A team chosen for you.</p>
+          <h2>The right specialists. One campaign direction.</h2>
+          <p class="large-copy">You should not have to search through hundreds of profiles, brief six different suppliers or hold the campaign together yourself.</p>
+          <p>We clarify what the campaign must achieve, decide what deserves to be made and hand-pick the people best equipped to deliver it.</p>
+          <p>Every team is different because every campaign is different.</p>
+          <a class="button button-coral" href="#start">Build Your Campaign Team <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="role-ledger reveal" aria-label="Examples of specialists a campaign team can include">
+          <div class="ledger-head"><span>Capability ledger</span><span>Selected to brief</span></div>
+          <div class="ledger-row"><span>01</span><strong>Audience strategy &amp; research</strong><i>As required</i></div>
+          <div class="ledger-row"><span>02</span><strong>Creative direction &amp; campaign thinking</strong><i>As required</i></div>
+          <div class="ledger-row"><span>03</span><strong>Copywriting &amp; scriptwriting</strong><i>As required</i></div>
+          <div class="ledger-row"><span>04</span><strong>Directing, photography &amp; producing</strong><i>As required</i></div>
+          <div class="ledger-row"><span>05</span><strong>Design, animation &amp; VFX</strong><i>As required</i></div>
+          <div class="ledger-row"><span>06</span><strong>Editing, sound &amp; post-production</strong><i>As required</i></div>
+          <div class="ledger-row"><span>07</span><strong>Social, media &amp; performance</strong><i>As required</i></div>
+          <div class="ledger-row"><span>08</span><strong>AI production specialists</strong><i>As required</i></div>
+          <div class="ledger-total"><span>Not included</span><strong>Unnecessary overhead</strong></div>
+        </div>
+      </div>
+    </section>
 
-  const finishClose = (dialog) => {
-    const trigger = dialog.returnFocusTarget;
-    const restoreFocus = dialog.dataset.restoreFocus !== "false";
+    <section class="section-pad process-section" id="process">
+      <div class="shell">
+        <div class="section-index">03 / How it works</div>
+        <div class="split-heading reveal">
+          <div>
+            <p class="eyebrow"><span></span>A team built around the result</p>
+            <h2>Three steps. One clear campaign.</h2>
+          </div>
+          <div class="heading-copy">
+            <p>We make the important decisions in the right order, then lead the work from first brief to final delivery.</p>
+          </div>
+        </div>
+        <ol class="process-list">
+          <li class="process-step reveal">
+            <span class="process-number">01</span>
+            <div>
+              <p class="process-kicker">Clarify the job</p>
+              <h3>Start with what must move.</h3>
+            </div>
+            <div>
+              <p>Tell us what you are taking to market, who needs to act, what is at stake, your budget and your deadline. We identify the campaign’s commercial job, audience, message and priorities.</p>
+              <strong>You leave with one clear direction.</strong>
+            </div>
+          </li>
+          <li class="process-step reveal">
+            <span class="process-number">02</span>
+            <div>
+              <p class="process-kicker">Build the team</p>
+              <h3>Select only the skills the campaign needs.</h3>
+            </div>
+            <div>
+              <p>We assemble a hand-picked team from our trusted collective. You approve the people, scope and transparent budget before production begins.</p>
+              <strong>You get the right people, without unnecessary overhead.</strong>
+            </div>
+          </li>
+          <li class="process-step reveal">
+            <span class="process-number">03</span>
+            <div>
+              <p class="process-kicker">Lead the campaign</p>
+              <h3>Keep every moving part connected.</h3>
+            </div>
+            <div>
+              <p>Campaign Producers briefs the specialists, coordinates the work and leads every review from first idea to final delivery.</p>
+              <strong>You get one connected campaign, not disconnected assets.</strong>
+            </div>
+          </li>
+        </ol>
+        <div class="process-cta reveal">
+          <p>One senior point of accountability throughout.</p>
+          <a class="button button-primary" href="#start">Discuss Your Campaign</a>
+        </div>
+      </div>
+    </section>
 
-    dialog.classList.remove("package-dialog-fallback");
+    <section class="section-pad collective-section" id="collective">
+      <div class="shell">
+        <div class="section-index">04 / The Collective</div>
+        <div class="collective-grid">
+          <div class="collective-copy reveal">
+            <p class="eyebrow"><span></span>Human talent, selected for the job</p>
+            <h2>Great people do their best work when the brief is clear.</h2>
+            <p class="large-copy">The Campaign Producers Collective brings experienced creative, strategic and production talent together around work that deserves their attention.</p>
+            <p>Every specialist is selected for their craft, judgement, reliability and fit with the campaign.</p>
+            <p>They receive a clear brief, strong leadership and a properly managed process. You receive a joined-up team without having to build or manage it yourself.</p>
+            <p><strong>You do not browse profiles and guess who might work. You tell us what must move. We build the team capable of moving it.</strong></p>
+          </div>
+          <div class="selection-board reveal" id="collective-criteria">
+            <div class="selection-title">
+              <span>Collective selection / 04</span>
+              <strong>Chosen for the campaign</strong>
+            </div>
+            <div class="selection-criteria">
+              <article><span>01</span><strong>Craft</strong><p>Can they make the work excellent?</p></article>
+              <article><span>02</span><strong>Judgement</strong><p>Can they make the right decisions?</p></article>
+              <article><span>03</span><strong>Reliability</strong><p>Can the team depend on them?</p></article>
+              <article><span>04</span><strong>Fit</strong><p>Are they right for this brief?</p></article>
+            </div>
+            <div class="selection-outcome">
+              <span>The result</span>
+              <strong>A team that fits the work.</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    if (trigger) {
-      trigger.setAttribute("aria-expanded", "false");
-    }
+    <section class="human-ai-section">
+      <div class="shell human-ai-grid">
+        <div class="human-statement reveal">
+          <div class="section-index section-index-light">05 / Human + AI</div>
+          <p class="eyebrow eyebrow-light"><span></span>People make the decisions. AI earns its place.</p>
+          <h2>Human-led.</h2>
+          <strong>Smarter by design.</strong>
+        </div>
+        <div class="human-copy reveal">
+          <p class="large-copy">AI can make parts of campaign development and production faster, more flexible and more affordable.</p>
+          <p>We use it when it creates real value, including research, exploration, pre-production, production, adaptation and versioning.</p>
+          <p>But technology does not decide what your audience should feel, which story is worth telling or who should be trusted to tell it. That judgement remains human.</p>
+          <p class="ai-note">Where AI could add value, its role is discussed as part of the agreed production approach.</p>
+        </div>
+      </div>
+    </section>
 
-    delete dialog.dataset.restoreFocus;
-    dialog.returnFocusTarget = null;
-    updatePageScroll();
+    <section class="section-pad commercial-section" id="model">
+      <div class="shell">
+        <div class="section-index">06 / The commercial model</div>
+        <div class="split-heading reveal">
+          <div>
+            <p class="eyebrow"><span></span>One scope. One team. One transparent budget.</p>
+            <h2>Know where the money goes.</h2>
+          </div>
+          <div class="heading-copy">
+            <p>Every proposal clearly separates the costs below. You approve the team and budget before work begins. No hidden commissions. No unnecessary roles added to inflate the scope.</p>
+            <p>For businesses running campaigns throughout the year, Campaign Producers can also provide ongoing leadership through a monthly partnership.</p>
+          </div>
+        </div>
+        <div class="budget-ledger reveal">
+          <div><span>01</span><strong>Campaign strategy &amp; scoping</strong><small>Direction</small></div>
+          <div><span>02</span><strong>Specialist talent fees</strong><small>People</small></div>
+          <div><span>03</span><strong>External production costs</strong><small>Making</small></div>
+          <div><span>04</span><strong>Campaign production &amp; management</strong><small>Leadership</small></div>
+          <div><span>05</span><strong>Agreed AI tools or technology</strong><small>Capability</small></div>
+          <div><span>06</span><strong>Optional optimisation &amp; support</strong><small>Momentum</small></div>
+        </div>
+        <div class="commercial-action reveal">
+          <p>The team, scope and budget are clear before production begins.</p>
+          <a class="button button-primary" href="#start">Discuss Your Campaign</a>
+        </div>
+      </div>
+    </section>
 
-    if (restoreFocus && trigger && trigger.isConnected) {
-      window.requestAnimationFrame(() => trigger.focus());
-    }
-  };
+    <section class="section-pad proof-section" id="proof">
+      <div class="shell">
+        <div class="section-index section-index-light">07 / Results</div>
+        <div class="split-heading light-heading reveal">
+          <div>
+            <p class="eyebrow eyebrow-light"><span></span>Campaign results from work delivered before Campaign Producers</p>
+            <h2>Clear judgement when the deadline, budget and outcome matter.</h2>
+          </div>
+          <div class="heading-copy">
+            <p>The Queensberry work below was delivered at the production company Henk led before founding Campaign Producers. Leading Lady was co-written, directed and produced by Henk.</p>
+          </div>
+        </div>
 
-  const closeDialog = (dialog, restoreFocus = true) => {
-    if (!dialog || !isOpen(dialog)) {
-      return;
-    }
+        <article class="result-feature reveal">
+          <div class="result-image">
+            <img src="/assets/images/dazn-queensberry.jpg" alt="Queensberry fighters in a DAZN campaign visual" width="5504" height="3072" loading="lazy">
+            <span>Queensberry × DAZN</span>
+          </div>
+          <div class="result-copy">
+            <p class="case-kicker">Rapid campaign delivery</p>
+            <h3>From brief to international broadcast in fewer than five days.</h3>
+            <p>A fast-moving fight-night brief became a focused 30-second commercial, produced and delivered for international broadcast.</p>
+            <div class="result-stats">
+              <div><strong>&lt; 5 days</strong><span>Brief to broadcast</span></div>
+              <div><strong>300,000+</strong><span>Reported first-day views</span></div>
+            </div>
+            <p class="case-provenance">Led by Henk as managing director and producer at the production company he ran before founding Campaign Producers. View count was reported by the client team.</p>
+          </div>
+        </article>
 
-    dialog.dataset.restoreFocus = restoreFocus ? "true" : "false";
+        <div class="result-grid">
+          <article class="result-card reveal">
+            <div class="result-image">
+              <img src="/assets/images/derbyfest-hero.png" alt="DerbyFest campaign character artwork" width="1920" height="1080" loading="lazy">
+              <span>Queensberry × DerbyFest</span>
+            </div>
+            <div class="result-card-copy">
+              <p class="case-kicker">Distinctive campaign world</p>
+              <h3>35,000 tickets in two weeks. DerbyFest sold out.</h3>
+              <p>A distinctive creative world helped DerbyFest command attention inside the wider Queensberry sales campaign.</p>
+              <div class="mini-stats">
+                <div><strong>35,000</strong><span>Tickets sold</span></div>
+                <div><strong>2 weeks</strong><span>Campaign window</span></div>
+                <div><strong>Sold out</strong><span>DerbyFest</span></div>
+              </div>
+              <p class="case-provenance">Work led by Henk before founding Campaign Producers. Sales outcomes were reported by the client team.</p>
+            </div>
+          </article>
 
-    if (dialog.classList.contains("package-dialog-fallback")) {
-      dialog.removeAttribute("open");
-      finishClose(dialog);
-      return;
-    }
+          <article class="result-card reveal">
+            <div class="result-image result-image-poster">
+              <img src="/assets/images/leading-lady-imdb-poster-1436x2048.jpg" alt="Leading Lady theatrical poster" width="1436" height="2048" loading="lazy">
+              <span>Leading Lady</span>
+            </div>
+            <div class="result-card-copy">
+              <p class="case-kicker">Independent film campaign</p>
+              <h3>176,000 admissions, sales across 15 territories and a later Netflix USA release.</h3>
+              <p>An independent romantic comedy reached 176,000 admissions from 44 theatres, sold across 15 territories, secured North American distribution and later appeared on Netflix USA.</p>
+              <div class="mini-stats">
+                <div><strong>176,000</strong><span>Admissions</span></div>
+                <div><strong>44</strong><span>Theatres</span></div>
+                <div><strong>15</strong><span>Territories</span></div>
+              </div>
+              <p class="case-provenance">Henk was co-writer, director, producer and campaign lead before founding Campaign Producers. Figures come from retained campaign records.</p>
+              <a class="text-link" href="/proof-leading-lady.html">Open the evidence <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+        <p class="proof-note">Queensberry work was delivered at the production company Henk led before founding Campaign Producers. Leading Lady records are supported by retained campaign data and independent reporting. Brand references indicate past work and do not imply endorsement of Campaign Producers.</p>
+      </div>
+    </section>
 
-    if (typeof dialog.close === "function") {
-      dialog.close();
-    } else {
-      dialog.removeAttribute("open");
-      finishClose(dialog);
-    }
-  };
+    <section class="section-pad producer-section" id="producer">
+      <div class="shell producer-grid">
+        <figure class="producer-image reveal">
+          <img src="/assets/images/henk-pretorius.jpg" alt="Henk Pretorius, founder and Campaign Producer" width="1365" height="2048" loading="lazy">
+          <figcaption><strong>Henk Pretorius</strong><span>Founder / Campaign Producer</span></figcaption>
+        </figure>
+        <div class="producer-copy reveal">
+          <div class="section-index">08 / Your Campaign Producer</div>
+          <p class="eyebrow"><span></span>One accountable lead. The right team behind him.</p>
+          <h2>You work directly with Henk.</h2>
+          <p class="large-copy">Henk clarifies the campaign, shapes the idea, assembles the team and leads the work through delivery.</p>
+          <p>Across cinema, streaming, broadcast and commercial campaigns, he combines a writer’s understanding of story, a director’s command of attention and a producer’s responsibility for budgets, people and deadlines.</p>
+          <p>Instead of passing your campaign through layers of account management, Henk remains directly involved and brings in the specialists your particular brief requires.</p>
+          <div class="experience-line">
+            <strong>Two decades</strong>
+            <span>Helping audiences notice, care and act.</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  const openDialog = (dialog, trigger) => {
-    if (!dialog || isOpen(dialog)) {
-      return;
-    }
+    <section class="section-pad fit-section" id="fit">
+      <div class="shell">
+        <div class="section-index">09 / Who it is for</div>
+        <div class="split-heading reveal">
+          <div>
+            <p class="eyebrow"><span></span>A strong fit</p>
+            <h2>For people with an important result to deliver.</h2>
+          </div>
+          <div class="heading-copy">
+            <p>Campaign Producers works best for founders, marketing leaders and commercial teams with a real route to market, but without the complete campaign team already in place.</p>
+          </div>
+        </div>
+        <div class="fit-grid">
+          <article class="fit-card reveal"><span>01</span><h3>Something must move.</h3><p>You are launching, repositioning, selling, growing or taking an important idea to market.</p></article>
+          <article class="fit-card reveal"><span>02</span><h3>You need more than one skill.</h3><p>The campaign requires strategy, writing, creative and production talent working together.</p></article>
+          <article class="fit-card reveal"><span>03</span><h3>You want one accountable lead.</h3><p>You do not want to manage a full agency or coordinate multiple freelancers yourself.</p></article>
+          <article class="fit-card reveal"><span>04</span><h3>There is a route to market.</h3><p>The campaign can reach customers through media, sales, social, events, partnerships or distribution.</p></article>
+        </div>
+      </div>
+    </section>
 
-    dialog.returnFocusTarget = trigger;
-    trigger.setAttribute("aria-expanded", "true");
+    <section class="join-section" id="join">
+      <div class="shell join-grid">
+        <div class="join-copy reveal">
+          <p class="eyebrow eyebrow-light"><span></span>For talent</p>
+          <h2>Great at your craft? Join the Collective.</h2>
+        </div>
+        <div class="join-detail reveal">
+          <p>We are building a trusted network of strategists, creative directors, directors, writers, prompt engineers, designers, editors, animators, VFX artists and creative specialists.</p>
+          <p>Campaign Producers gives talented people clear briefs, properly managed projects and opportunities matched to their strengths.</p>
+          <p class="join-note">Membership is curated. Quality, reliability and work ethic matter as much as the portfolio.</p>
+          <a class="button button-coral" href="mailto:henk@campaignproducers.com?subject=Application%20to%20join%20the%20Campaign%20Producers%20Collective">Apply to Join the Collective <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
 
-    if (typeof dialog.showModal === "function") {
-      dialog.showModal();
-    } else {
-      dialog.classList.add("package-dialog-fallback");
-      dialog.setAttribute("open", "");
-    }
+    <section class="section-pad contact-section" id="start">
+      <div class="shell">
+        <div class="contact-heading reveal">
+          <div>
+            <p class="eyebrow"><span></span>Bring us the campaign. We’ll build the team.</p>
+            <h2>What do you need to move?</h2>
+          </div>
+          <p>Tell us what you are taking to market, who needs to act, your deadline and your available budget. We will identify the first priority, recommend the right combination of talent and show you a clear route forward.</p>
+        </div>
 
-    updatePageScroll();
+        <form class="campaign-form reveal" id="campaign-enquiry-form" action="https://script.google.com/macros/s/AKfycbw5cHZpa-JsfMXsmFlGUAun1tZ2tbU8rq2r4dCNn_fZlUSpGUK8bfC06NyrIjt27CI3/exec" method="POST" accept-charset="UTF-8" data-campaign-form>
+          <input type="hidden" name="page" value="https://www.campaignproducers.com/">
+          <input class="honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="form-meta"><span>Campaign brief / 01</span><strong>Start with the commercial job</strong></div>
+          <div class="field-row">
+            <label>Name<input type="text" name="name" autocomplete="name" placeholder="Your name" required></label>
+            <label>Work email<input type="email" name="email" autocomplete="email" placeholder="you@company.com" required></label>
+          </div>
+          <div class="field-row">
+            <label>Company<input type="text" name="company" autocomplete="organization" placeholder="Company or brand" required></label>
+            <label>Available budget
+              <select name="budget" required>
+                <option value="" selected disabled>Choose the closest range</option>
+                <option>Under £10k</option>
+                <option>£10k to £25k</option>
+                <option>£25k to £50k</option>
+                <option>£50k to £100k</option>
+                <option>£100k+</option>
+                <option>Not set yet</option>
+              </select>
+            </label>
+          </div>
+          <label>What are you taking to market?<textarea name="product" placeholder="The product, offer, event, launch or commercial priority" required></textarea></label>
+          <label>What needs to move?<textarea name="goal" placeholder="The action, outcome or commercial change the campaign must create" required></textarea></label>
+          <div class="field-row">
+            <label>Who needs to act?<input type="text" name="audience" placeholder="The audience or customer" required></label>
+            <label>Deadline<input type="text" name="deadline" placeholder="Date or timeframe" required></label>
+          </div>
+          <label>What team or suppliers are already in place?<textarea name="existing_team" placeholder="Your internal team, agency, freelancers or trusted partners"></textarea></label>
+          <button class="button button-primary form-submit" type="submit">Build Your Campaign Team <span aria-hidden="true">→</span></button>
+          <p class="form-status" data-form-status role="status" aria-live="polite" hidden></p>
+          <p class="form-note">Your information is used only to respond to this enquiry. Prefer email? <a href="mailto:henk@campaignproducers.com">henk@campaignproducers.com</a></p>
+        </form>
+      </div>
+    </section>
 
-    const closeButton = dialog.querySelector("[data-package-close]");
-    if (closeButton) {
-      window.requestAnimationFrame(() => closeButton.focus());
-    }
-  };
+    <section class="section-pad faq-section" id="faq">
+      <div class="shell faq-grid">
+        <div class="faq-heading reveal">
+          <div class="section-index">10 / Questions</div>
+          <p class="eyebrow"><span></span>Before you begin</p>
+          <h2>Clear answers. No hidden assumptions.</h2>
+        </div>
+        <div class="faq-list reveal">
+          <details>
+            <summary>Is Campaign Producers an agency?</summary>
+            <p>Campaign Producers provides the leadership and accountability of an agency without forcing every brief through the same permanent team. Specialists are chosen around the campaign.</p>
+          </details>
+          <details>
+            <summary>Can you work with our existing team or agency?</summary>
+            <p>Yes. We can work with your internal team, existing agency or trusted suppliers and add only the skills that are missing.</p>
+          </details>
+          <details>
+            <summary>Can we choose the people working on our campaign?</summary>
+            <p>Yes. We recommend the strongest team for the brief and explain why each person has been selected. You approve the team before work begins.</p>
+          </details>
+          <details>
+            <summary>How are specialists selected?</summary>
+            <p>We consider the campaign objective, audience, format, budget, timing, creative approach and working style. Craft matters, but so do judgement, reliability and collaboration.</p>
+          </details>
+          <details>
+            <summary>Do you use AI?</summary>
+            <p>Yes, when it improves the work, reduces unnecessary cost or creates useful flexibility. Every campaign remains led by human strategy, creativity and accountability.</p>
+          </details>
+          <details>
+            <summary>How much does it cost?</summary>
+            <p>Every campaign is scoped individually. Your proposal separates strategy, talent, production, technology and management costs so you can see where the budget goes.</p>
+          </details>
+          <details>
+            <summary>I am a creative specialist. Can I join?</summary>
+            <p>You can apply to join the Collective. Every application is reviewed for quality, experience, reliability and fit with the work Campaign Producers is building.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  openButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      openDialog(
-        document.getElementById(button.dataset.packageOpen || ""),
-        button
-      );
-    });
-  });
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div class="footer-brand">
+        <img src="/assets/images/campaign-producers-logo.png" alt="Campaign Producers" width="800" height="208">
+        <p>One campaign. The right people.</p>
+      </div>
+      <div class="footer-links">
+        <span>Navigate</span>
+        <a href="#process">How it works</a>
+        <a href="#collective">The Collective</a>
+        <a href="/insights/">Insights</a>
+        <a href="#proof">Results</a>
+        <a href="#producer">Your Campaign Producer</a>
+        <a href="#join">Join the Collective</a>
+      </div>
+      <div class="footer-action">
+        <span>Have an important campaign to move?</span>
+        <a class="button button-primary" href="#start">Build Your Campaign Team</a>
+        <a class="footer-email" href="mailto:henk@campaignproducers.com">henk@campaignproducers.com</a>
+      </div>
+    </div>
+    <div class="shell footer-bottom">
+      <span>© <span data-year>2026</span> Campaign Producers</span>
+      <span>Human-led / AI-enabled / One accountable lead</span>
+    </div>
+  </footer>
 
-  dialogs.forEach((dialog) => {
-    dialog.querySelectorAll("[data-package-close]").forEach((button) => {
-      button.addEventListener("click", () => closeDialog(dialog));
-    });
-
-    dialog.querySelectorAll("[data-package-cta]").forEach((link) => {
-      link.addEventListener("click", () => closeDialog(dialog, false));
-    });
-
-    dialog.addEventListener("click", (event) => {
-      if (event.target === dialog) {
-        closeDialog(dialog);
-      }
-    });
-
-    dialog.addEventListener("cancel", (event) => {
-      event.preventDefault();
-      closeDialog(dialog);
-    });
-
-    dialog.addEventListener("close", () => finishClose(dialog));
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key !== "Escape") {
-      return;
-    }
-
-    const fallbackDialog = dialogs.find(
-      (dialog) => isOpen(dialog) && dialog.classList.contains("package-dialog-fallback")
-    );
-
-    if (fallbackDialog) {
-      closeDialog(fallbackDialog);
-    }
-  });
-})();
-</script>
-<script>
-(() => {
-  const form = document.getElementById("campaign-enquiry-form");
-
-  if (!form) {
-    return;
-  }
-
-  const submitButton = form.querySelector('button[type="submit"]');
-  const statusMessage = form.querySelector("[data-form-status]");
-  const originalButtonHtml = submitButton ? submitButton.innerHTML : "";
-
-  const valueOf = (formData, fieldName) => {
-    const value = formData.get(fieldName);
-    return value == null ? "" : String(value).trim();
-  };
-
-  const buildMessage = (formData) => {
-    const sections = [
-      ["What are you taking to market?", valueOf(formData, "product")],
-      ["What needs to change?", valueOf(formData, "message")],
-      ["How often do you run campaigns?", valueOf(formData, "campaign_frequency")],
-      ["Which level of support seems closest?", valueOf(formData, "partnership")],
-      ["Who needs to be involved?", valueOf(formData, "current_team") || "Not provided"],
-      ["Preferred start", valueOf(formData, "start_timeframe")],
-      ["Expected production or media budget", valueOf(formData, "budget") || "Not set"]
-    ];
-
-    return sections
-      .map(([heading, answer]) => `${heading}\n${answer}`)
-      .join("\n\n");
-  };
-
-  const showStatus = (message, isError = false) => {
-    if (!statusMessage) {
-      return;
-    }
-
-    statusMessage.hidden = false;
-    statusMessage.dataset.state = isError ? "error" : "success";
-    statusMessage.textContent = message;
-  };
-
-  form.addEventListener("submit", async (event) => {
-    event.preventDefault();
-    event.stopImmediatePropagation();
-
-    if (!form.reportValidity() || form.dataset.submitting === "true") {
-      return;
-    }
-
-    form.dataset.submitting = "true";
-
-    if (submitButton) {
-      submitButton.disabled = true;
-      submitButton.textContent = "Sending…";
-    }
-
-    if (statusMessage) {
-      statusMessage.hidden = false;
-      statusMessage.dataset.state = "sending";
-      statusMessage.textContent = "Sending your request…";
-    }
-
-    const formData = new FormData(form);
-    const payload = new URLSearchParams();
-
-    payload.set("name", valueOf(formData, "name"));
-    payload.set("email", valueOf(formData, "email"));
-    payload.set("company", valueOf(formData, "company"));
-    payload.set("budget", valueOf(formData, "budget"));
-    payload.set("message", buildMessage(formData));
-    payload.set("page", window.location.href);
-    payload.set("website", valueOf(formData, "website"));
-
-    try {
-      await fetch(form.action, {
-        method: "POST",
-        mode: "no-cors",
-        body: payload
-      });
-
-      form.reset();
-      showStatus("Thank you. Your request has been sent. We will be in touch shortly.");
-    } catch (error) {
-      console.error("Campaign enquiry submission failed:", error);
-      showStatus(
-        "The form could not be sent. Please email henk@campaignproducers.com directly.",
-        true
-      );
-    } finally {
-      delete form.dataset.submitting;
-
-      if (submitButton) {
-        submitButton.disabled = false;
-        submitButton.innerHTML = originalButtonHtml;
-      }
-    }
-  }, true);
-})();
-</script>
-<script defer="" src="assets/js/site.js"></script>
+  <a class="mobile-cta is-hidden" href="#start" data-mobile-cta>Build Your Campaign Team</a>
+  <script defer src="/assets/js/site.js"></script>
 </body>
 </html>
