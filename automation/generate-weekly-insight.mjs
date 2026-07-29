@@ -412,7 +412,7 @@ const renderFooter = () => `
 <span>Human-led / AI-enabled / One accountable lead</span>
 </div>
 </footer>
-<script defer src="/assets/js/site.js"></script>`;
+<script defer src="/assets/js/site.js?v=20260729-2"></script>`;
 
 const renderSourceLinks = (sourceNumbers) => {
   if (!sourceNumbers.length) return "";
@@ -501,8 +501,8 @@ ${renderSourceLinks(section.source_numbers)}`,
 <meta content="${escapeHtml(article.standfirst)}" name="twitter:description">
 <meta content="${BASE_URL}/og.png" name="twitter:image">
 <link href="/assets/images/campaign-producers-mark.png" rel="icon" type="image/png">
-<link href="/assets/css/styles.css" rel="stylesheet">
-<link href="/assets/css/insights.css" rel="stylesheet">
+<link href="/assets/css/styles.css?v=20260729-2" rel="stylesheet">
+<link href="/assets/css/insights.css?v=20260729-2" rel="stylesheet">
 <script type="application/ld+json">${schemaJson}</script>
 </head>
 <body>
