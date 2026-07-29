@@ -1,6 +1,18 @@
 {
   "posts": [
     {
+      "date": "2026-07-29",
+      "title": "Creative feedback is a decision system, not a comments thread.",
+      "slug": "creative-feedback-decision-system",
+      "topic": "Campaign leadership"
+    },
+    {
+      "date": "2026-07-29",
+      "title": "Brief the commercial change, not the list of deliverables.",
+      "slug": "brief-commercial-change-not-deliverables",
+      "topic": "Campaign briefing"
+    },
+    {
       "date": "2026-07-22",
       "title": "AI, traditional or hybrid? Start with the campaign job.",
       "slug": "ai-traditional-or-hybrid-production",
