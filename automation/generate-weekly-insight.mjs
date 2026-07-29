@@ -227,7 +227,7 @@ ${
     : "Choose the strongest current subject from the approved editorial territory."
 }
 
-Look primarily at developments from the last 21 days. If no recent development supports a genuinely useful article, choose an evergreen decision problem and ground it in current authoritative sources.
+Look primarily at developments from the last 21 days. If no recent development supports a clearly useful article, choose an evergreen decision problem and ground it in current authoritative sources.
 ${correction}
 `;
 
