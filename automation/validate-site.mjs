@@ -20,11 +20,16 @@ const SITE_ROOT = (await exists(path.join(ROOT, "public", "index.html")))
 
 const requiredFiles = [
   "index.html",
+  "join/index.html",
+  "privacy/index.html",
   "insights/index.html",
   "insights/ai-traditional-or-hybrid-production/index.html",
   "assets/css/styles.css",
   "assets/css/insights.css",
+  "assets/css/join.css",
   "assets/js/site.js",
+  "assets/js/join.js",
+  "google-apps-script/Code.gs",
   "og.png",
   "rss.xml",
   "sitemap.xml",
@@ -76,6 +81,12 @@ const walk = async (directory) => {
 const insightFiles = (await walk(path.join(SITE_ROOT, "insights"))).filter(
   (file) => file.endsWith(".html"),
 );
+const permanentPageFiles = [
+  path.join(SITE_ROOT, "index.html"),
+  path.join(SITE_ROOT, "join", "index.html"),
+  path.join(SITE_ROOT, "privacy", "index.html"),
+  ...insightFiles,
+];
 
 const localTarget = (htmlFile, rawReference) => {
   const reference = rawReference.split("#")[0].split("?")[0];
@@ -97,7 +108,7 @@ const localTarget = (htmlFile, rawReference) => {
   return target;
 };
 
-for (const file of insightFiles) {
+for (const file of permanentPageFiles) {
   const relativePath = path.relative(SITE_ROOT, file);
   const html = await fs.readFile(file, "utf8");
 
@@ -139,14 +150,19 @@ for (const file of insightFiles) {
 }
 
 const liveTextFiles = [
-  path.join(SITE_ROOT, "index.html"),
-  ...insightFiles,
+  ...permanentPageFiles,
+  path.join(SITE_ROOT, "assets", "js", "site.js"),
+  path.join(SITE_ROOT, "assets", "js", "join.js"),
+  path.join(SITE_ROOT, "assets", "css", "styles.css"),
+  path.join(SITE_ROOT, "assets", "css", "join.css"),
   path.join(SITE_ROOT, "rss.xml"),
   path.join(SITE_ROOT, "sitemap.xml"),
   path.join(ROOT, "automation", "latest-linkedin-post.txt"),
+  path.join(ROOT, "automation", "generate-weekly-insight.mjs"),
 ];
 
 const retiredTopicPattern = new RegExp(["micro", "dramas?"].join(""), "i");
+const prohibitedWordPattern = new RegExp(["genu", "ine"].join(""), "i");
 const legacyPhrases = [
   /Request a clarity call/i,
   /Say what matters\. Spend where it counts\./i,
@@ -162,6 +178,9 @@ for (const file of liveTextFiles) {
   }
   if (retiredTopicPattern.test(content)) {
     errors.push(`${relativePath} contains retired editorial terminology.`);
+  }
+  if (prohibitedWordPattern.test(content)) {
+    errors.push(`${relativePath} contains prohibited copy.`);
   }
   for (const phrase of legacyPhrases) {
     if (phrase.test(content)) {
@@ -209,6 +228,8 @@ for (const marker of [
 for (const url of [
   "https://www.campaignproducers.com/insights/",
   "https://www.campaignproducers.com/insights/ai-traditional-or-hybrid-production/",
+  "https://www.campaignproducers.com/join/",
+  "https://www.campaignproducers.com/privacy/",
 ]) {
   if (!sitemap.includes(`<loc>${url}</loc>`)) {
     errors.push(`sitemap.xml is missing required URL: ${url}`);
@@ -245,5 +266,5 @@ if (errors.length) {
 }
 
 console.log(
-  `Validated ${insightFiles.length} insight pages, local links, structured data, RSS, sitemap, editorial automation and retired-page removal.`,
+  `Validated ${permanentPageFiles.length} site pages, local links, structured data, RSS, sitemap, editorial automation and copy requirements.`,
 );
