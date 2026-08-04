@@ -8,7 +8,7 @@
   </url>
   <url>
     <loc>https://www.campaignproducers.com/insights/</loc>
-    <lastmod>2026-07-29</lastmod>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -25,6 +25,11 @@
     <priority>0.5</priority>
   </url>
   <!-- AUTOMATED_SITEMAP_START -->
+<url>
+<loc>https://www.campaignproducers.com/insights/employee-creators-trusted-voices/</loc>
+<lastmod>2026-08-04</lastmod>
+<priority>0.8</priority>
+</url>
 <url>
 <loc>https://www.campaignproducers.com/insights/creative-feedback-decision-system/</loc>
 <lastmod>2026-07-29</lastmod>
